@@ -249,12 +249,18 @@ map('n', 'gO', Snacks.picker.lsp_symbols)
 local parsers = {
   'bash',
   'c',
+  'comment',
   'cpp',
   'css',
   'diff',
+  'dockerfile',
+  'doxygen',
   'go',
   'html',
+  'java',
   'javascript',
+  'jsdoc',
+  'json',
   'latex',
   'lua',
   'luadoc',
@@ -268,6 +274,7 @@ local parsers = {
   'typst',
   'vim',
   'vimdoc',
+  'yaml',
   'zig',
 }
 

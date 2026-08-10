@@ -31,6 +31,7 @@
     gnumake
     cmake
     meson
+    pkg-config
     ninja
 
     nodejs

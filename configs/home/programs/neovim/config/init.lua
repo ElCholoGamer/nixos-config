@@ -100,6 +100,17 @@ vim.filetype.add({
   },
 })
 
+
+-- MDX support
+-- Stuff taken from https://github.com/davidmh/mdx.nvim
+vim.treesitter.language.register('markdown', 'mdx')
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'mdx',
+  callback = function(args)
+    vim.treesitter.start(args.buf, 'markdown')
+  end,
+})
+
 -- Highlight yanked text
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
@@ -329,28 +340,25 @@ require('fidget').setup({
 local conform = require('conform')
 conform.setup({
   formatters_by_ft = {
-    arduino = { 'clang-format' },
     astro = { 'prettierd' },
     css = { 'prettierd' },
-    graphql = { 'prettierd' },
     haskell = { 'ormolu' },
     html = { 'prettierd' },
     javascript = { 'prettierd' },
     javascriptreact = { 'prettierd' },
     json = { 'prettierd' },
     markdown = { 'prettierd' },
+    mdx = { 'prettierd' },
     nix = { 'nixfmt' },
     python = { 'isort', 'black' },
-    quarto = { 'prettierd' },
-    r = { 'styler' },
     rust = { 'rustfmt' },
     sass = { 'prettierd' },
     scss = { 'prettierd' },
+    terraform = { 'terraform_fmt' },
     typescript = { 'prettierd' },
     typescriptreact = { 'prettierd' },
     typst = { 'typstyle' },
     yaml = { 'prettierd' },
-    terraform = { 'terraform_fmt' },
   },
   format_on_save = function(bufnr)
     -- Disable with a global or buffer-local variable
@@ -440,13 +448,7 @@ local default_capabilities = {
 
 local servers = {
   arduino_language_server = {},
-  astro = {
-    init_options = {
-      typescript = {
-        tsdk = require('nix').tsdk,
-      },
-    },
-  },
+  astro = {},
   basedpyright = {},
   bashls = {},
   clangd = {

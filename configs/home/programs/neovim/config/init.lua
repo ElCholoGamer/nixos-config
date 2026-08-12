@@ -36,7 +36,6 @@ vim.opt.undofile = true
 vim.opt.updatetime = 300
 vim.opt.virtualedit = 'all'
 vim.opt.winborder = 'single'
-vim.opt.wrap = false
 
 
 -- ============================================================================

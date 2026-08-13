@@ -276,6 +276,7 @@ local parsers = {
   'luadoc',
   'markdown',
   'markdown_inline',
+  'nix',
   'query',
   'rust',
   'svelte',

@@ -4,10 +4,7 @@
     server.enable = false;
 
     settings = with config.scheme; {
-      main = {
-        font = "${config.theme.font.regular}:size=13";
-        dpi-aware = "yes";
-      };
+      main.font = "${config.theme.font.regular}:size=11.5";
 
       colors-dark = {
         cursor = "${base00} ${base05}";

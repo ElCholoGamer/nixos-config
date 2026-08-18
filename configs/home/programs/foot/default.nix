@@ -4,7 +4,7 @@
     server.enable = false;
 
     settings = with config.scheme; {
-      main.font = "${config.theme.font.regular}:size=11.5";
+      main.font = "${config.theme.font.regular}:size=13";
 
       colors-dark = {
         cursor = "${base00} ${base05}";

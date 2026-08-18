@@ -25,6 +25,13 @@
         RequestTTY = "yes";
         RemoteCommand = "tmux new -A -s main";
       };
+      "kali" = {
+        HostName = "localhost";
+        Port = 22220;
+        User = "pepe";
+        RequestTTY = "yes";
+        RemoteCommand = "tmux new -A -s main";
+      };
       "shinmy.ocicat-ray.ts.net" = {
         IdentitiesOnly = true;
         IdentityFile = "~/.ssh/shinmy_auth_id_ed25519";

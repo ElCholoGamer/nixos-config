@@ -10,9 +10,6 @@
       setSessionVariables = true;
       createDirectories = true;
 
-      publicShare = "${config.xdg.dataHome}/public";
-      templates = "${config.xdg.dataHome}/templates";
-
       extraConfig = {
         SCREENSHOTS = "${config.xdg.userDirs.pictures}/Screenshots";
         CODE = "${config.home.homeDirectory}/Code";

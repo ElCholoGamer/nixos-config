@@ -24,7 +24,7 @@
   programs.fuzzel.enable = true;
   programs.waybar.enable = true;
   programs.swaylock.enable = true;
-  programs.spicetify.enable = true;
+  # programs.spicetify.enable = true;
 
   services.cliphist.enable = true;
   services.wob.enable = true;

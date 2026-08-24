@@ -51,9 +51,13 @@
   };
 
   services.navidrome = {
+    enable = true;
     settings.Port = 4533;
-    # settings.MusicFolder = "/var/lib/navidrome/music";
   };
+
+  users.groups.music = { };
+  users.users.navidrome.extraGroups = [ "music" ];
+  users.users.jdgt.extraGroups = [ "music" ];
 
   services.jellyfin = {
     user = "jdgt";

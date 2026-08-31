@@ -5,6 +5,12 @@
   ...
 }:
 {
+  home.packages =
+    with pkgs;
+    lib.optionals config.wayland.windowManager.hyprland.enable [
+      wtype
+    ];
+
   wayland.windowManager.hyprland = {
     settings =
       let
